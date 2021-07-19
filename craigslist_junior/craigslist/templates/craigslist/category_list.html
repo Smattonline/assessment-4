@@ -1,0 +1,22 @@
+{% extends 'craigslist/base.html' %}
+
+{% block header %}
+<p></p>
+<button><a class='add-category' href="{% url 'new_category' %}">Add Category</a></button>
+<h2>Categories:</h2>
+{% endblock %}
+
+{% block content %}
+  
+  <div class="categories">
+    <div class="category-list">
+      {% for category in categories %}  
+        <div class="detail">
+          <h3><a class="cars" href="{% url 'category_items' category_id=category.id %}">{{ category.name }}</a></h3>
+        </div>
+      {% endfor %}
+    </div>
+    
+  </div>
+{% endblock %}
+

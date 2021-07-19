@@ -1,0 +1,26 @@
+{% extends 'craigslist/base.html' %}
+
+{% block header %}
+    <p></p>
+    <button><a class="back" href="{% url 'category_list' %}"> <= Back </a></button>
+    <h2>{{category.name}}:</h2>
+{% endblock %}
+
+{% block content %}
+  <div class="categories">
+    <div class="category-items">
+      <button><a href="{% url 'edit_category' category_id=category.id %}">Edit Category</a></button>
+      <button><a href="{% url 'delete_category' category_id=category.id %}">Delete Category</a></button>
+      <button><a class='add-item' href="{% url 'new_item' category_id=category.id %}">Add Item</a></button>
+      {% for item in items %}  
+        <div class="detail">
+          <h3><a class="item-list" href="{% url 'item_detail' category_id=category.id item_id=item.id %}">{{ item.title }} ${{ item.price }}   || {{ item.location }}</a></h3>
+        </div>
+      {% endfor %}
+    </div>
+    
+  </div>
+{% endblock %}
+
+<!-- <a class="btn btn-default" href="{% url 'edit_brand' brand_id=brand.id %}"><i class="bi bi-vector-pen"></i>Edit Category</a> -->
+

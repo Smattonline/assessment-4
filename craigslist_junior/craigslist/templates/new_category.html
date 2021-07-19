@@ -1,0 +1,17 @@
+{% extends 'craigslist/base.html' %}
+
+{% block header %}
+<p></p>
+<button><a class="back" href="{% url 'category_list' %}"> <= Back </a></button>
+<h2>Create a new category</h2>
+{% endblock %}
+
+{% block content %}
+  
+  <form method="POST" class="new_category">{% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type="submit" class="save btn btn-primary">{{ action }} Category</button>
+  </form>
+{% endblock %}

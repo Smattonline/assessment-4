@@ -1,0 +1,45 @@
+.base-header {
+    display: inline-flexbox; 
+    background-color: whitesmoke;
+    padding: 8px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
+    border-spacing: inherit;
+    grid-gap: 20px;
+    align-content: center;
+}
+
+#craig {
+    font-size: 30px;
+    text-decoration:none;
+    
+}
+
+#home {
+    text-decoration:none;
+    font-size: 18px;
+    background-color: #e4e4e4;
+    float: inherit;
+    padding: 15px 20px 7px;
+    text-align: justify;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+#login  {
+    float: right;
+    background-color: #e4e4e4;
+    padding: 8px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.back {
+    text-decoration:none;
+}

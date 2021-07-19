@@ -1,0 +1,21 @@
+{% extends 'craigslist/base.html' %}
+
+{% block header %}
+<p></p>
+<button><a class="back" href="{% url 'category_items' category_id=category.id %}"> <= Back </a></button>
+<h3>{{ item.title }} ${{ item.price }}</h3>
+{% endblock %}
+
+{% block content %}
+  <div class="item-detail">  
+    
+    <div>
+        <div class="detail">
+            <p>{{ item.location }}</p>
+            <p>{{ item.description }}</p>
+        </div>
+    </div>
+    <button><a href="{% url 'edit_item' category_id=category.id item_id=item.id %}">Edit Item</a></button>
+    <button><a href="{% url 'delete_item' category_id=category.id item_id=item.id %}">Delete Item</button>
+  </div>
+{% endblock %}
